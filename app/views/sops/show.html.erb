@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @sop.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @sop.content %>
+</p>
+
+<%= link_to 'Edit', edit_sop_path(@sop) %> |
+<%= link_to 'Back', sops_path %>

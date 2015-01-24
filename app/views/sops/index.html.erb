@@ -1,0 +1,27 @@
+<h1>Listing sops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sops.each do |sop| %>
+      <tr>
+        <td><%= sop.title %></td>
+        <td><%= sop.content %></td>
+        <td><%= link_to 'Show', sop %></td>
+        <td><%= link_to 'Edit', edit_sop_path(sop) %></td>
+        <td><%= link_to 'Destroy', sop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sop', new_sop_path %>
